@@ -1,0 +1,15 @@
+NAIVE BAYESIAN
+Overall Accuracy of naive bayesian without stop words filterationis 94.35%
+Overall Accuracy of naive bayesian with stop words filteration is 94.14%
+| StopWords   | Accuracy(Ham)      | Accuracy(Spam)     |
+|-------------+--------------------+--------------------|
+| False       | 96.83908045977012% | 87.6923076923077%  |
+| True        | 96.83908045977012% | 86.92307692307692% |
+-----------------------------------------------------------
+LOGISTIC REGRESSION
+Overall Accuracy of logistic regression without stop words filterationis 93.31%
+Overall Accuracy of logistic regression with stop words filteration is 94.56%
+| StopWords   | Accuracy(Ham)      | Accuracy(Spam)     |
+|-------------+--------------------+--------------------|
+| False       | 94.82758620689656% | 89.23076923076924% |
+| True        | 97.12643678160919% | 87.6923076923077%  |

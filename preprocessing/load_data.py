@@ -1,28 +1,25 @@
-import glob
-import os
-file_list_test_ham  =  glob.glob(os.path.join(os.getcwd(), "hw2_test","test","ham", "*.txt"))
-file_list_test_spam =  glob.glob(os.path.join(os.getcwd(), "hw2_test","test","spam", "*.txt"))
-file_list_train_ham  = glob.glob(os.path.join(os.getcwd(), "hw2_train","train","ham", "*.txt"))
-file_list_train_spam = glob.glob(os.path.join(os.getcwd(), "hw2_train","train","spam", "*.txt"))
 
-CORPUS_TEST_HAM = []
-CORPUS_TEST_SPAM = []
-CORPUS_TRAIN_HAM = []
-CORPUS_TRAIN_SPAM = []
+def initialize(HAM_TRAIN_PATH,SPAM_TRAIN_PATH,HAM_TEST_PATH,SPAM_TEST_PATH):
+        corpus_test_ham = []
+        corpus_test_spam = []
+        corpus_train_ham = []
+        corpus_train_spam = []
 
 
-for file_path in file_list_test_ham:
-    with open(file_path,encoding='latin1') as f_input:
-        CORPUS_TEST_HAM.append(f_input.read())
+        for file_path in HAM_TEST_PATH:
+                with open(file_path,encoding='latin1') as f_input:
+                        corpus_test_ham.append(f_input.read())
 
-for file_path in file_list_test_spam:
-    with open(file_path,encoding='latin1') as f_input:
-        CORPUS_TEST_SPAM.append(f_input.read())
+        for file_path in SPAM_TEST_PATH:
+                with open(file_path,encoding='latin1') as f_input:
+                        corpus_test_spam.append(f_input.read())
 
-for file_path in file_list_train_ham:
-    with open(file_path,encoding='latin1') as f_input:
-        CORPUS_TRAIN_HAM.append(f_input.read())
+        for file_path in HAM_TRAIN_PATH:
+                with open(file_path,encoding='latin1') as f_input:
+                        corpus_train_ham.append(f_input.read())
 
-for file_path in file_list_train_spam:
-    with open(file_path,encoding='latin1') as f_input:
-        CORPUS_TRAIN_SPAM.append(f_input.read())
+        for file_path in SPAM_TRAIN_PATH:
+                with open(file_path,encoding='latin1') as f_input:
+                        corpus_train_spam.append(f_input.read())
+        
+        return corpus_train_ham,corpus_train_spam,corpus_test_ham,corpus_test_spam
